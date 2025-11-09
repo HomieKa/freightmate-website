@@ -29,7 +29,7 @@ The dev server runs at `http://localhost:3000`. Environment variables use the st
 - **State/data fetching**: Pinia is available for future stores; Vue Query is registered globally in `src/main.ts`.
 - **Styling**: Tailwind + brand tokens are defined in `src/assets/css/main.css` and `tailwind.config.ts`.
 - **Testing**: Vitest is configured through `vite.config.ts` with jsdom + Testing Library utilities. Sample specs live in `tests/`.
-- **Docs**: See `MIGRATION_NOTES.md` and `docs/EQUIVALENCE_REPORT.md` for migration context and route mapping.
+- **Docs**: See `MIGRATION_NOTES.md` and `docs-reference/EQUIVALENCE_REPORT.md` for migration context and route mapping.
 
 ## Production Check
 
