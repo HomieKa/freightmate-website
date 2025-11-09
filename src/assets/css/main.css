@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  scroll-behavior: smooth;
+  --brand-green: #80bf45;
+  --brand-slate: #5a6268;
+  --brand-teal: #00827a;
+  --brand-light: #e5e7eb;
+  --focus-ring: 0 0 0 4px rgba(0, 130, 122, 0.35);
+  --section-y: clamp(2rem, 4vw + 1rem, 6rem);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  @apply text-[color:var(--brand-slate)];
+  font-family: 'Inter', theme('fontFamily.sans');
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: 6px;
+}
+
+.btn-pill {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2 font-medium transition shadow-none;
+}
+
+.btn-pill:hover {
+  @apply -translate-y-px shadow-card;
+}
+
+.btn-primary {
+  @apply btn-pill bg-[color:var(--brand-green)] text-white hover:opacity-95;
+}
+
+.btn-primary-teal {
+  @apply inline-flex items-center justify-center rounded-full px-5 py-2.5 font-medium bg-[color:var(--brand-teal)] text-white shadow-card hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2;
+}
+
+.btn-secondary {
+  @apply btn-pill border border-[color:var(--brand-teal)] bg-white text-[color:var(--brand-teal)] hover:bg-[color:var(--brand-light)];
+}
+
+.surface {
+  @apply rounded-2xl border border-[color:var(--brand-light)] bg-white shadow-card;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background: var(--brand-light);
+}
+
+.section {
+  padding-block: var(--section-y);
+}
+
+.fluid-h1 {
+  font-size: clamp(2rem, 2.5vw + 1.25rem, 3.5rem);
+  line-height: 1.1;
+}
+
+.fluid-h2 {
+  font-size: clamp(1.25rem, 1.5vw + 1rem, 2rem);
+}
+
+.hero-bg {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 130, 122, 0.08) 0%,
+    rgba(128, 191, 69, 0.06) 20%,
+    rgba(255, 255, 255, 0) 60%
+  );
+}
+
+.hero-bg::after {
+  content: none;
+}
