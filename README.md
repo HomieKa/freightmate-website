@@ -48,7 +48,7 @@ This repository is preconfigured for the `HomieKa/freightmate` GitHub Pages proj
 2. In the repository settings, open *Pages* and pick **GitHub Actions** as the source (the included `.github/workflows/deploy.yml` workflow handles everything).
 3. Workflow summary:
    - Installs dependencies with pnpm, runs `pnpm build`, and uploads `dist/` as the artifact.
-   - Deploys to the `gh-pages` environment so the site is available at `https://homieka.github.io/freightmate/`.
-4. The Vite config sets `base: '/freightmate/'`, so any asset and router paths resolve correctly under the project page URL.
+   - Deploys to the `gh-pages` environment so the site is available at `https://homieka.github.io/freightmate-website/`.
+4. The Vite config sets `base: '/freightmate-website/'`, so any asset and router paths resolve correctly under the project page URL.
 
 To test the GitHub Pages bundle locally, run `pnpm build` and serve the `dist/` directory (e.g., `npx serve dist`) to confirm all relative links work.
